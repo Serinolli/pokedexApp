@@ -98,6 +98,8 @@
   --ion-color-water-shade: #3d80ac;
   --ion-color-water-tint: #589dca;
 
+
+  //eletrico
   --ion-color-eletric: #eed535;
   --ion-color-eletric-rgb: 238,213,53;
   --ion-color-eletric-contrast: #ffffff;
@@ -105,7 +107,7 @@
   --ion-color-eletric-shade: #d1bb2f;
   --ion-color-eletric-tint: #f0d949;
 
-
+//psiquico
   --ion-color-psychic: #f366b9;
   --ion-color-psychic-rgb: 243,102,185;
   --ion-color-psychic-contrast: #ffffff;
@@ -113,7 +115,7 @@
   --ion-color-psychic-shade: #d65aa3;
   --ion-color-psychic-tint: #f475c0;
 
-
+//metal
   --ion-color-metal: #9eb7b8;
   --ion-color-metal-rgb: 158,183,184;
   --ion-color-metal-contrast: #ffffff;
@@ -121,7 +123,7 @@
   --ion-color-metal-shade: #8ba1a2;
   --ion-color-metal-tint: #a8bebf;
 
-
+//fada
   --ion-color-fairy: #fdb9e9;
   --ion-color-fairy-rgb: 253,185,233;
   --ion-color-fairy-contrast: #ffffff;
@@ -129,13 +131,14 @@
   --ion-color-fairy-shade: #dfa3cd;
   --ion-color-fairy-tint: #fdc0eb;
 
-
-  --ion-color-flying:  180deg,(#3dc7ef 50%, #bdb9b8 50%);
+  //flying 
+  
+  --ion-color-flying: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
   --ion-color-flying-rgb: 61,199,239;
   --ion-color-flying-contrast: #ffffff;
-  --ion-color-flying-contrast-rgb: 255,255,255;
-  --ion-color-flying-shade: ( #36afd2, #a6a3a2);
-  --ion-color-flying-tint: ( #50cdf1, #c4c0bf);
+  --ion-color-flying-contrast-rgb: 0,0,0;
+  --ion-color-flying-shade: #36afd2;
+  --ion-color-flying-tint: #50cdf1;
 
 }
 
