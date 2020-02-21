@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DadosService } from '../servicos/dados.service';
 
 @Component({
   selector: 'app-home',
@@ -78,12 +79,19 @@ if(busca&&busca.trim() != ''){
     return false;
   });
 
+  /*
+  this.listaFiltrada = this.listaFiltrada.filter(dados =>{
+    if (dados.nome.toLowerCase().indexOf(busca.toLowerCase()) > -1) || (dados.numero.toLowerCase().indexOf(busca.toLowerCase()) > -1){
+      return true;
+    }
+    return false; 
+    */
   
 }
     
   };
 
-  constructor() {
+  constructor(dadosService: DadosService) {
 this.resetarLista();
 
   }
