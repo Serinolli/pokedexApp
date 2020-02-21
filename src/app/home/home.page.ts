@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { DadosService } from '../servicos/dados.service';
 
+export interface IPokemon{
+  numero: string;
+  nome: string;
+  tipos: string[];
+  img: string;
+
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -93,8 +101,12 @@ if(busca&&busca.trim() != ''){
 
   constructor(dadosService: DadosService) {
 this.resetarLista();
+  }
+  abrirDadosPokemon(pokemon: IPokemon){
+console.log(pokemon);
 
   }
+
   private resetarLista(){
     this.listaFiltrada = this.listaPokemons;
   }
