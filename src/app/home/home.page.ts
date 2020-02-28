@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DadosService } from '../servicos/dados.service';
+import { Router } from '@angular/router';
 
 export interface IPokemon{
   numero: string;
@@ -99,11 +100,18 @@ if(busca&&busca.trim() != ''){
     
   };
 
-  constructor(dadosService: DadosService) {
+  constructor(public dadosService: DadosService, public router : Router){
 this.resetarLista();
   }
+
   abrirDadosPokemon(pokemon: IPokemon){
 console.log(pokemon);
+//Salva os dados do pokemon no BD Virtual.
+this.dadosService.setDados('dadosPokemon', pokemon)
+
+//Abre a página para exibir os dados.
+this.router.navigateByUrl('/dados-pokemon');
+
 
   }
 
