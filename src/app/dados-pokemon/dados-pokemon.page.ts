@@ -10,17 +10,18 @@ import { Router } from '@angular/router';
 })
 export class DadosPokemonPage implements OnInit {
 
-  public pokemon : IPokemon;
+  public pokemon: IPokemon;
 
-  constructor(public dadosService: DadosService, public router : Router) { 
+  constructor(public dadosService: DadosService, public router: Router) {
     this.pokemon = this.dadosService.getDados('dadosPokemon');
-    if(!this.pokemon){
+    if (!this.pokemon) {
       this.router.navigateByUrl('/home');
     }
 
-    console.log(this.pokemon);}
+    console.log(this.pokemon);
+  }
 
-  ngOnInit() { 
+  ngOnInit() {
   }
 
 }
