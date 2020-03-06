@@ -6,14 +6,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
-  <ion-searchbar placeholder="Buscar Pokemon" color="medium" 
+<ion-content color="light">
+  <ion-searchbar placeholder="Buscar Pokemon" color="light" 
   (ionChange)="buscarPokemon($event)">
 </ion-searchbar>
   
 
   <ion-item-sliding *ngFor="let pokemon of listaFiltrada">
-    <ion-item color="dark" (click)="abrirDadosPokemon(pokemon)">
+    <ion-item color="light" (click)="abrirDadosPokemon(pokemon)">
 
       <ion-chip color="light" slot="start">
         <ion-label [color]="pokemon.tipos[0] | lowercase">{{pokemon.numero}}</ion-label>

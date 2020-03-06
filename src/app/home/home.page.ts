@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DadosService } from '../servicos/dados.service';
 import { Router } from '@angular/router';
+import { PokemonApiService } from '../servicos/pokemon-api.service';
 
 export interface IPokemon{
   numero: string;
@@ -71,6 +72,13 @@ export class HomePage {
   ];
   public listaFiltrada = [];
 
+  public listaPokemonApi;
+  public totalPokemons;
+  public offset = 0;
+  public limit = 10;
+
+  
+
   public buscarPokemon(evento : any){
     let busca= evento.target.value;
 
@@ -100,8 +108,16 @@ if(busca&&busca.trim() != ''){
     
   };
 
-  constructor(public dadosService: DadosService, public router : Router){
+  constructor(public dadosService: DadosService, public router : Router, public pokeApi:PokemonApiService){
 this.resetarLista();
+this.buscarPokemons(this.offset, this.limit)
+  }
+  public buscarPokemons(offset, limit){
+    this.pokeApi.buscarPokemons(offset, limit).subscribe(dados=>{
+      console.log(dados);
+      this.totalPokemons = dados['count'];
+      this.listaPokemonApi = dados['results']
+    })
   }
 
   abrirDadosPokemon(pokemon: IPokemon){

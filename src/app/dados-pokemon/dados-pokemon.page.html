@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar [color]="pokemon.tipos[0] | lowercase">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
       </ion-buttons>
@@ -8,16 +8,16 @@
 </ion-header>
 
 <ion-content [color]="pokemon.tipos[0] | lowercase">
-  <ion-card color="dark">
+  <ion-card color="light">
     <ion-card-header>
       <img [src]="pokemon.img" alt="foto do pokemon">
     </ion-card-header>
       
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-label>Numero:</ion-label>
        <ion-text>{{pokemon.numero}}</ion-text>
      </ion-item>
-     <ion-item color="dark">
+     <ion-item color="light">
      <ion-label>Tipos: </ion-label>
      <ion-badge [color]="tipo | lowercase" *ngFor="let tipo of pokemon.tipos">{{tipo}}</ion-badge>
     </ion-item>
