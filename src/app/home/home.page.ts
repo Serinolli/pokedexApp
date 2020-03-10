@@ -130,9 +130,9 @@ export class HomePage {
 
       //Percorre a lista e busca na Api os dados de pokemon
       for (let item of listaApi) {
-        this.pokeApi.buscaPokemonUrl(item.url).subscribe(dado => {
+        this.pokeApi.buscaPokemonUrl(item.url).subscribe(dadosPokemon => {
           //Add os dados do pokemon ao final da lista 
-          this.listaPokemonApi.push(dado);
+          this.listaPokemonApi.push(dadosPokemon);
 
         })
       }
